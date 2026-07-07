@@ -51,15 +51,15 @@ On server you need:
 * cURL
 * JSON
 
-## Resources / Docs
+## Resources and documentation
 
-* Webpage ([https://www.gopay.com](https://www.gopay.com))
-* Official resources in EN ([https://doc.gopay.com/en/](https://doc.gopay.com/en/))
-* Official resources in CZ ([https://doc.gopay.com/cs/](https://doc.gopay.com/cs/))
+* GoPay website ([https://www.gopay.com](https://www.gopay.com))
+* Official documentation in English ([https://doc.gopay.com/en/](https://doc.gopay.com/en/))
+* Official documentation in Czech ([https://doc.gopay.com/cs/](https://doc.gopay.com/cs/))
 
 ## Examples
 
-All you can find in [examples folder](examples).
+See the [examples directory](examples) for complete examples.
 
 ## Library
 
@@ -71,7 +71,7 @@ A core class holding credentials, token, authenticator and http client. It could
 
 ### 2) HttpClient
 
-Delegates all requests / responses to IO. All requests go over `cURL`. There is a place for other implementation, go for it.
+Delegates all requests / responses to IO. All requests go over `cURL`. Other implementations can be added there.
 
 ### 3) Services
 
@@ -116,7 +116,7 @@ use Contributte\GopayInline\Api\Lists\Scope;
 $token = $client->authenticate(['scope' => Scope::PAYMENT_CREATE]);
 ```
 
-Heureka! We have token, let's make some API request.
+The token can now be used to make API requests.
 
 ### Creating payment request
 
@@ -236,7 +236,7 @@ $url = $response['gw_url'];
 // ...
 ```
 
-In case of inline variant you can use prepared [javascript](client-side) (under development at this moment).
+For the inline variant, you can use the prepared [client-side JavaScript](client-side).
 
 ### Verify payment (check state)
 
